@@ -30,7 +30,7 @@ include __DIR__ . '/functions.php'
 
 <form action="" method="GET">
 <label for="lunghezza">Lunghezza password:</label>
-<input type="number" id="lunghezza" name="lunghezza" required>
+<input type="number" id="lunghezza" name="lunghezza" min="8" max="32" required>
 <button type="submit">Genera password</button>
 </form>
 

@@ -1,3 +1,6 @@
+
+
+
 <?php
 // Genero una password casuale
 function passwordCasuale($lunghezza) {
@@ -10,10 +13,16 @@ return $password;
 }
 
 //Verifico se la lunghezza della pw è specificata
-if (isset($_GET['lunghezza'])) {
+if (isset($_GET['lunghezza'])
+&&
+is_numeric($_GET['lunghezza'])
+) {
+
   $lunghezza = $_GET['lunghezza'];
+
+
   $password = passwordCasuale($lunghezza);
   echo "La password di lunghezza $lunghezza è: $password";
-}
+} 
 
 ?>
